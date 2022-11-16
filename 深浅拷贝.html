@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+  // 浅拷贝的四种方法
+        // 1.Object.assign
+        // const obj={}
+        // const sou={
+        //     name:'张三',
+        //     info:{
+        //         age:18
+        //     }
+        // }
+        // Object.assign(obj,sou)
+        // console.log(obj);//{name: '张三', info: {…}}
+        // sou.info.age=16
+        // console.log(obj,sou);
+
+        // 2.扩展运算符
+        //  const sou={
+        //     name:'张三',
+        //     info:{
+        //         age:18
+        //     }
+        // }
+        // const obj={...sou}
+        // console.log(obj);
+        // obj.info.age=16
+        // console.log(obj,sou);
+
+        // 3.Array.prototype.concat
+        // const arr=[1,2,{name:'张三'}]
+        // const newArr=arr.concat()
+        // newArr[2].name="李四"
+        // console.log(arr);
+        // console.log(newArr);
+
+        // 4.Array.prototype.slice
+        // const arr=[1,2,{name:'张三'}]
+        // const newArr=arr.slice()
+        // newArr[2].name='李四'
+        // console.log(arr,newArr);
+
+
+        //深拷贝的三种实现方式
+        // 1.递归
+        // function deepClone(obj){
+        //     let objClone=Array.isArray(obj)?[]:{}
+        //     if(obj&&typeof obj==='object'){
+        //         for(key in obj){
+        //             if(obj.hasOwnProperty(key)){
+        //                 if(obj[key]&&typeof obj[key]==='object'){
+        //                     objClone[key]=deepClone(obj[key]);
+        //                 }else {
+        //                     objClone[key] = obj[key];
+        //                 }
+        //             }
+        //         }
+        //     }
+        //     return objClone
+        // }
+        // let a=[1,2,3,4]
+        // b=deepClone(a)
+        // a[0]=2
+        // console.log(a,b);
+
+        // 2.JSON.stringify和JSON.parse
+        //     var obj={a:{
+        //         c:2,
+        //         d:[9,8,7]
+        //     },
+        //     b:4
+        // }
+        // var jsontext=JSON.stringify(obj)
+        // var obj1=JSON.parse(jsontext)
+        // console.log(obj,obj1);
+        // obj.a.d[0]=888
+        // console.log(obj,obj1);
+    </script>
+    <script>
+          // 浅拷贝的四种方法
+        // 1.Object.assign
+        // const obj={}
+        // const sou={
+        //     name:'张三',
+        //     info:{
+        //         age:18
+        //     }
+        // }
+        // Object.assign(obj,sou)
+        // console.log(obj);//{name: '张三', info: {…}}
+        // sou.info.age=16
+        // console.log(obj,sou);
+
+        // 2.扩展运算符
+        //  const sou={
+        //     name:'张三',
+        //     info:{
+        //         age:18
+        //     }
+        // }
+        // const obj={...sou}
+        // console.log(obj);
+        // obj.info.age=16
+        // console.log(obj,sou);
+
+        // 3.Array.prototype.concat
+        // const arr=[1,2,{name:'张三'}]
+        // const newArr=arr.concat()
+        // newArr[2].name="李四"
+        // console.log(arr);
+        // console.log(newArr);
+
+        // 4.Array.prototype.slice
+        // const arr=[1,2,{name:'张三'}]
+        // const newArr=arr.slice()
+        // newArr[2].name='李四'
+        // console.log(arr,newArr);
+
+
+        //深拷贝的三种实现方式
+        // 1.递归
+        // function deepClone(obj){
+        //     let objClone=Array.isArray(obj)?[]:{}
+        //     if(obj&&typeof obj==='object'){
+        //         for(key in obj){
+        //             if(obj.hasOwnProperty(key)){
+        //                 if(obj[key]&&typeof obj[key]==='object'){
+        //                     objClone[key]=deepClone(obj[key]);
+        //                 }else {
+        //                     objClone[key] = obj[key];
+        //                 }
+        //             }
+        //         }
+        //     }
+        //     return objClone
+        // }
+        // let a=[1,2,3,4]
+        // b=deepClone(a)
+        // a[0]=2
+        // console.log(a,b);
+
+        // 2.JSON.stringify和JSON.parse
+        //     var obj={a:{
+        //         c:2,
+        //         d:[9,8,7]
+        //     },
+        //     b:4
+        // }
+        // var jsontext=JSON.stringify(obj)
+        // var obj1=JSON.parse(jsontext)
+        // console.log(obj,obj1);
+        // obj.a.d[0]=888
+        // console.log(obj,obj1);
+    </script>
+    <script>
+  // 浅拷贝的四种方法
+        // 1.Object.assign
+        // const obj={}
+        // const sou={
+        //     name:'张三',
+        //     info:{
+        //         age:18
+        //     }
+        // }
+        // Object.assign(obj,sou)
+        // console.log(obj);//{name: '张三', info: {…}}
+        // sou.info.age=16
+        // console.log(obj,sou);
+
+        // 2.扩展运算符
+        //  const sou={
+        //     name:'张三',
+        //     info:{
+        //         age:18
+        //     }
+        // }
+        // const obj={...sou}
+        // console.log(obj);
+        // obj.info.age=16
+        // console.log(obj,sou);
+
+        // 3.Array.prototype.concat
+        // const arr=[1,2,{name:'张三'}]
+        // const newArr=arr.concat()
+        // newArr[2].name="李四"
+        // console.log(arr);
+        // console.log(newArr);
+
+        // 4.Array.prototype.slice
+        // const arr=[1,2,{name:'张三'}]
+        // const newArr=arr.slice()
+        // newArr[2].name='李四'
+        // console.log(arr,newArr);
+
+
+        //深拷贝的三种实现方式
+        // 1.递归
+        // function deepClone(obj){
+        //     let objClone=Array.isArray(obj)?[]:{}
+        //     if(obj&&typeof obj==='object'){
+        //         for(key in obj){
+        //             if(obj.hasOwnProperty(key)){
+        //                 if(obj[key]&&typeof obj[key]==='object'){
+        //                     objClone[key]=deepClone(obj[key]);
+        //                 }else {
+        //                     objClone[key] = obj[key];
+        //                 }
+        //             }
+        //         }
+        //     }
+        //     return objClone
+        // }
+        // let a=[1,2,3,4]
+        // b=deepClone(a)
+        // a[0]=2
+        // console.log(a,b);
+
+        // 2.JSON.stringify和JSON.parse
+        //     var obj={a:{
+        //         c:2,
+        //         d:[9,8,7]
+        //     },
+        //     b:4
+        // }
+        // var jsontext=JSON.stringify(obj)
+        // var obj1=JSON.parse(jsontext)
+        // console.log(obj,obj1);
+        // obj.a.d[0]=888
+        // console.log(obj,obj1);
+    </script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         // this指向
+        //默认绑定
+        // 1.
+        // function foo() {
+        //     console.log(this);//window
+        // }
+        // foo()
+        // 2.
+        // function foo1() {
+        //     console.log(this);//window
+        // }
+        // function foo2() {
+        //     console.log(this);//window
+        //     foo1()
+        // }
+        // function foo3() {
+        //     console.log(this);//window
+        //     foo2()
+        // }
+        // foo3()
+        // 3.
+        // var obj={
+        //     name:'张三',
+        //     foo:function() {
+        //         console.log(this);//window
+        //     }
+        // }
+        // var bar=obj.foo
+        // bar()
+        //隐式绑定
+        // 1.
+        // var obj={
+        //     name: '张三',
+        //     foo:function() {}
+        // }
+        // obj.foo()//obj
+        // 2.
+        // var obj={
+        //     name:'张三',
+        //     eating:function() {
+        //         console.log(obj.name+'在吃东西');
+        //     },
+        //     running: function() {
+        //         console.log(obj.name+'在跑步');
+        //     }
+        // }
+        // var fn=obj.eating
+        // fn()
+        // 3.
+        // var obj1 = {
+        //     name: 'obj1',
+        //     foo: function () {
+        //         console.log(this);//{name: 'obj2', bar: ƒ}
+        //     }
+        // }
+        // var obj2={
+        //     name: 'obj2',
+        //     bar:obj1.foo
+        // }
+        // obj2.bar()
+
+        //显示绑定
+        // function foo() {
+        //     console.log(this);
+        // }
+
+        // var obj = {
+        //     name: 'obj'
+        // }
+        // foo.call(obj)//{name: 'obj'}
+        // foo.apply(obj)//{name: 'obj'}
+        // foo.apply('aaa')//String {'aaa'}
+        // call和apply的区别
+        // function sum(num1, num2, num3) {
+        //     console.log(num1 + num2 + num3, this)
+        // }
+        // sum.call("call", 20, 30, 40)//90 String {'call'}
+        // sum.apply("apply", [20, 30, 40])//90 String {'apply'}
+
+        //箭头函数
+        // var fun=()=>{
+        //     console.log(this);//window
+        // }
+        // var obj={
+        //     ber:fun,
+        // }
+        // obj.ber()
+        // var o={
+        //     a:10,
+        //     b:{
+        //         a:12,
+        //         fn: function() {
+        //             console.log(this);//Object(b)
+        //         }
+        //     }
+        // }
+        // o.b.fn()
+    </script>
+    <script>
+         // this指向
+        //默认绑定
+        // 1.
+        // function foo() {
+        //     console.log(this);//window
+        // }
+        // foo()
+        // 2.
+        // function foo1() {
+        //     console.log(this);//window
+        // }
+        // function foo2() {
+        //     console.log(this);//window
+        //     foo1()
+        // }
+        // function foo3() {
+        //     console.log(this);//window
+        //     foo2()
+        // }
+        // foo3()
+        // 3.
+        // var obj={
+        //     name:'张三',
+        //     foo:function() {
+        //         console.log(this);//window
+        //     }
+        // }
+        // var bar=obj.foo
+        // bar()
+        //隐式绑定
+        // 1.
+        // var obj={
+        //     name: '张三',
+        //     foo:function() {}
+        // }
+        // obj.foo()//obj
+        // 2.
+        // var obj={
+        //     name:'张三',
+        //     eating:function() {
+        //         console.log(obj.name+'在吃东西');
+        //     },
+        //     running: function() {
+        //         console.log(obj.name+'在跑步');
+        //     }
+        // }
+        // var fn=obj.eating
+        // fn()
+        // 3.
+        // var obj1 = {
+        //     name: 'obj1',
+        //     foo: function () {
+        //         console.log(this);//{name: 'obj2', bar: ƒ}
+        //     }
+        // }
+        // var obj2={
+        //     name: 'obj2',
+        //     bar:obj1.foo
+        // }
+        // obj2.bar()
+
+        //显示绑定
+        // function foo() {
+        //     console.log(this);
+        // }
+
+        // var obj = {
+        //     name: 'obj'
+        // }
+        // foo.call(obj)//{name: 'obj'}
+        // foo.apply(obj)//{name: 'obj'}
+        // foo.apply('aaa')//String {'aaa'}
+        // call和apply的区别
+        // function sum(num1, num2, num3) {
+        //     console.log(num1 + num2 + num3, this)
+        // }
+        // sum.call("call", 20, 30, 40)//90 String {'call'}
+        // sum.apply("apply", [20, 30, 40])//90 String {'apply'}
+
+        //箭头函数
+        // var fun=()=>{
+        //     console.log(this);//window
+        // }
+        // var obj={
+        //     ber:fun,
+        // }
+        // obj.ber()
+        // var o={
+        //     a:10,
+        //     b:{
+        //         a:12,
+        //         fn: function() {
+        //             console.log(this);//Object(b)
+        //         }
+        //     }
+        // }
+        // o.b.fn()
+    </script>
+    <script>
+         // this指向
+        //默认绑定
+        // 1.
+        // function foo() {
+        //     console.log(this);//window
+        // }
+        // foo()
+        // 2.
+        // function foo1() {
+        //     console.log(this);//window
+        // }
+        // function foo2() {
+        //     console.log(this);//window
+        //     foo1()
+        // }
+        // function foo3() {
+        //     console.log(this);//window
+        //     foo2()
+        // }
+        // foo3()
+        // 3.
+        // var obj={
+        //     name:'张三',
+        //     foo:function() {
+        //         console.log(this);//window
+        //     }
+        // }
+        // var bar=obj.foo
+        // bar()
+        //隐式绑定
+        // 1.
+        // var obj={
+        //     name: '张三',
+        //     foo:function() {}
+        // }
+        // obj.foo()//obj
+        // 2.
+        // var obj={
+        //     name:'张三',
+        //     eating:function() {
+        //         console.log(obj.name+'在吃东西');
+        //     },
+        //     running: function() {
+        //         console.log(obj.name+'在跑步');
+        //     }
+        // }
+        // var fn=obj.eating
+        // fn()
+        // 3.
+        // var obj1 = {
+        //     name: 'obj1',
+        //     foo: function () {
+        //         console.log(this);//{name: 'obj2', bar: ƒ}
+        //     }
+        // }
+        // var obj2={
+        //     name: 'obj2',
+        //     bar:obj1.foo
+        // }
+        // obj2.bar()
+
+        //显示绑定
+        // function foo() {
+        //     console.log(this);
+        // }
+
+        // var obj = {
+        //     name: 'obj'
+        // }
+        // foo.call(obj)//{name: 'obj'}
+        // foo.apply(obj)//{name: 'obj'}
+        // foo.apply('aaa')//String {'aaa'}
+        // call和apply的区别
+        // function sum(num1, num2, num3) {
+        //     console.log(num1 + num2 + num3, this)
+        // }
+        // sum.call("call", 20, 30, 40)//90 String {'call'}
+        // sum.apply("apply", [20, 30, 40])//90 String {'apply'}
+
+        //箭头函数
+        // var fun=()=>{
+        //     console.log(this);//window
+        // }
+        // var obj={
+        //     ber:fun,
+        // }
+        // obj.ber()
+        // var o={
+        //     a:10,
+        //     b:{
+        //         a:12,
+        //         fn: function() {
+        //             console.log(this);//Object(b)
+        //         }
+        //     }
+        // }
+        // o.b.fn()
+    </script>
+</body>
+</html>
